@@ -1,1 +1,1 @@
-ABCDEF
+this is the secret file containing secret
