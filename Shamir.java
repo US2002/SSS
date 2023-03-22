@@ -182,15 +182,19 @@ public final class Shamir {
                 plain += (char) i;
             }
             reader.close();
+            FileWriter writer = new FileWriter("file.txt");
+            writer.write("");
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Text file read.");
         return plain;
     }
 
     public static void plainTextWriter(String result) {
         try {
-            File plaintext = new File("PlaintText.txt");
+            File plaintext = new File("Output.txt");
             System.out.println("File created: " + plaintext.getName());
 
             String plain = result;
