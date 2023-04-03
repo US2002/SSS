@@ -280,6 +280,7 @@ public final class Shamir {
         if (users >= K) {
             // Recunstruting the shares using Lagrange Polynomial Interpolation theorem.
             final Shamir shamir2 = new Shamir(K, N);
+            //Use result as a key in ARS encryption.
             final BigInteger result = shamir2.reconstruction(shares, prime);
             String plaintext = convertHexToString(result.toString(16));
             System.out.println("Decoded Secret is stored in: ");
